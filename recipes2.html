@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+    <link rel="stylesheet" href="./css/recipes2.css" />
+    <link rel="stylesheet" href="./css/homepage.css" />
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="header-container">
+        <div class="header-logo-section">
+          <a href="/">
+            <img src="./images/naxLogoBlue.png" />
+          </a>
+        </div>
+        <div class="header-links-section">
+          <!-- <a href="/">Products</a> -->
+          <a href="https://cfpl.net.in/ourstory.php">About Us</a>
+          <!-- <a href="/">Our Blog</a> -->
+          <a href="https://cfpl.net.in/contact.php">Contact Us</a>
+        </div>
+        <div class="hamburger-section">
+          <p>☰</p>
+        </div>
+      </div>
+    </header>
+    <div class="hamburger-menu">
+      <div class="hamburger-overlay"></div>
+      <div class="hamburger-slider">
+        <div class="cross">x</div>
+        <!-- <h1>Products</h1> -->
+        <h1>
+          <a href="https://cfpl.net.in/contact.php" class="ancor"> About Us </a>
+        </h1>
+        <!-- <h1>Our Blog</h1> -->
+        <h1>
+          <a href="https://cfpl.net.in/contact.php" class="ancor">Contact Us</a>
+        </h1>
+      </div>
+    </div>
+    <div class="drool-worthy-section">
+      <h1>Drool Worthy Recipes</h1>
+    </div>
+    <div class="recipes-grid-section">
+      <div class="recipe-image-section">
+        <img class="recipe-image" />
+      </div>
+      <div class="recipe-detail-section">
+        <h1 class="recipe-title"></h1>
+        <div class="recipes-detail">
+          <h5>Ingredients</h5>
+          <div class="ingredients-list"></div>
+
+          <h5>Preparation</h5>
+          <div class="preparation-steps-list"></div>
+        </div>
+      </div>
+    </div>
+    <div class="other-recipes-section">
+      <h1>Other recipes</h1>
+      <div class="other-recipes-grid-section">
+        <a href="/recipe.html?recipe=spicy-chicken">
+          <div>
+            <img
+              src="https://jasminealimentos.com/wp-content/uploads/2017/07/frutas-da-estacao-1-1024x683.jpg"
+            />
+            <h4>Spicy Chicken Nugget Wrap</h4>
+          </div>
+        </a>
+        <a href="/recipe.html?recipe=spicy-chicken2">
+          <div>
+            <img
+              src="https://jasminealimentos.com/wp-content/uploads/2017/07/frutas-da-estacao-1-1024x683.jpg"
+            />
+            <h4>Spicy Chicken Nugget Wrap</h4>
+          </div>
+        </a>
+        <a href="/recipe.html?recipe=spicy-chicken3">
+          <div>
+            <img
+              src="https://jasminealimentos.com/wp-content/uploads/2017/07/frutas-da-estacao-1-1024x683.jpg"
+            />
+            <h4>Spicy Chicken Nugget Wrap</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-container">
+        <div class="footer-get-in-touch-section">
+          <input placeholder="GET 10% OFF ON YOUR FIRST ORDER" />
+          <button>GET IN TOUCH</button>
+        </div>
+        <div class="footer-links-section">
+          <a href="/">HOME</a>
+          <!-- <a href="/">PRODUCT</a> -->
+          <a href="https://cfpl.net.in/ourstory.php">ABOUT US</a>
+          <!-- <a href="/">OUR BLOG</a> -->
+          <a href="https://cfpl.net.in/contact.php">CONTACT US</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let recipeDetails = {
+        recipe1: {
+          ingredients: [
+            "2 Tbsp Oil",
+            "Chopped onion",
+            "Chopped tomato",
+            "Chopped garlic",
+            "Chopped Ginger",
+            "Garam Masala Powder",
+            "Coriander Powder",
+          ],
+          preparationSteps: [
+            "Heat 2 tablespoons of oil in a pan",
+            "Add 1 chopped onion ",
+            "1 chopped tomato",
+            "4 chopped garlic cloves, and 1½ teaspoon chopped ginger",
+            "Sauté until it turns golden brown",
+            "Add 1 cup of water and bring it to a boil",
+            "Add the cooked tikkas",
+            "Sprinkle ½ teaspoon of garam masala and coriander powder each",
+            "Boil the contents for 4 minutes",
+            "Garnish with fresh coriander leaves and serve hot with rice or paratha",
+          ],
+        },
+        recipe2: {
+          ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+          preparationSteps: ["Step 1", "Step 2", "Step 3"],
+        },
+      };
+
+      let urlParams = new URLSearchParams(window.location.search);
+      let recipeName = urlParams.get("recipe");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        if (recipeName in recipeDetails) {
+          let recipeTitle = document.querySelector(".recipe-title");
+          let recipeImage = document.querySelector(".recipe-image");
+          let ingredientsList = document.querySelector(".ingredients-list");
+          let preparationStepsList = document.querySelector(
+            ".preparation-steps-list"
+          );
+
+          // recipeTitle.textContent = recipeName.toUpperCase(); // Set recipe title
+
+          // Set recipe image based on recipe name
+          if (recipeName == "recipe1") {
+            recipeTitle.textContent = "PANEER TIKKA MASALA";
+            recipeImage.src = "./images/recipes-image.png";
+          } else if (recipeName == "recipe2") {
+            recipeImage.src = "./images/firstpotato-(1).png";
+          }
+
+          // Populate ingredients list
+          recipeDetails[recipeName].ingredients.forEach((ingredient) => {
+            let ingredientItem = document.createElement("p");
+            ingredientItem.textContent = ingredient;
+            ingredientsList.appendChild(ingredientItem);
+          });
+
+          // Populate preparation steps list
+          recipeDetails[recipeName].preparationSteps.forEach((step) => {
+            let stepItem = document.createElement("p");
+            stepItem.textContent = step;
+            preparationStepsList.appendChild(stepItem);
+          });
+        }
+      });
+      let headerLinksSection = document.querySelector(".header-links-section");
+      let headerLinks = headerLinksSection.querySelectorAll("a");
+      let pageHeader = document.querySelector(".page-header");
+      document.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          pageHeader.style.backgroundColor = "#E8C055";
+          pageHeader.style.position = "fixed";
+          pageHeader.style.top = "0";
+          pageHeader.style.left = "0";
+          pageHeader.style.zIndex = "20";
+          headerLinks.forEach(function (link) {
+            link.style.fontSize = "20px";
+          });
+        } else {
+          pageHeader.style.backgroundColor = "white";
+          pageHeader.style.position = "relative";
+          headerLinks.forEach(function (link) {
+            link.style.fontSize = "20px";
+            link.style.color = "#26386E";
+          });
+        }
+      });
+
+      function toggleMenu() {
+        document.querySelector(".menu-icon").classList.toggle("active");
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+
+      let hamburgerMenuSection = document.querySelector(".hamburger-menu");
+      let cross = document.querySelector(".cross");
+      let body = document.querySelector("body");
+      let hamburgerSymbol = document.querySelector(".hamburger-section");
+      let hamburgerOverlay = document.querySelector(".hamburger-overlay");
+      let hamburgerSlider = document.querySelector(".hamburger-slider");
+
+      hamburgerSymbol.addEventListener("click", function () {
+        hamburgerMenuSection.style.opacity = "1";
+        hamburgerMenuSection.style.visibility = "visible";
+        hamburgerSlider.style.right = "0px";
+        body.style.position = "fixed"; // Fix body position to disable scrolling
+        body.style.width = "100%"; // Maintain full width
+      });
+
+      hamburgerOverlay.addEventListener("click", function () {
+        hamburgerSlider.style.right = "-330px";
+        hamburgerMenuSection.style.opacity = "0";
+        hamburgerMenuSection.style.visibility = "hidden";
+        body.style.position = "static"; // Reset body position to enable scrolling
+        body.style.width = "auto"; // Reset width
+      });
+
+      cross.addEventListener("click", function () {
+        hamburgerSlider.style.right = "-330px";
+        hamburgerMenuSection.style.opacity = "0";
+        hamburgerMenuSection.style.visibility = "hidden";
+        body.style.position = "static"; // Reset body position to enable scrolling
+        body.style.width = "auto"; // Reset width
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./css/product.css" />
+
+    <!-- <link rel="stylesheet" href="./css/homepage.css"> -->
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="header-container">
+        <div class="header-logo-section">
+          <a href="/">
+            <img src="./images/naxLogoBlue.png" />
+          </a>
+        </div>
+        <div class="header-links-section">
+          <!-- <a href="/">Products</a> -->
+          <a href="https://cfpl.net.in/ourstory.php">About Us</a>
+          <!-- <a href="/">Our Blog</a> -->
+          <a href="https://cfpl.net.in/contact.php">Contact Us</a>
+        </div>
+        <div class="hamburger-section">
+          <p>☰</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="hamburger-menu">
+      <div class="hamburger-overlay"></div>
+      <div class="hamburger-slider">
+        <div class="cross">x</div>
+        <!-- <h1>Products</h1> -->
+        <h1>
+          <a href="https://cfpl.net.in/contact.php" class="ancor"> About Us </a>
+        </h1>
+        <!-- <h1>Our Blog</h1> -->
+        <h1>
+          <a href="https://cfpl.net.in/contact.php" class="ancor">Contact Us</a>
+        </h1>
+      </div>
+    </div>
+
+    <div class="product-section">
+      <div class="product-container-section">
+        <div class="product-image-section">
+          <img class="product-image" />
+        </div>
+        <div class="product-details-section">
+          <h1 class="product-title"></h1>
+          <p class="product-description"></p>
+          <div class="product-buy-now-section">
+            <div class="buy-now-heading">
+              <img src="./images/purchase.png" />
+              <h3>Buy On</h3>
+            </div>
+
+            <div class="logos">
+              <img src="./images/amazonLogo.png" />
+              <img src="./images/bigbasket-logo.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="first-wave-section">
+        <div class="shape-divider">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="features-section-parent">
+      <div class="features-section">
+        <h1>INNOVATION AND MEAT</h1>
+        <div class="features-grid-section">
+          <div>
+            <img src="./images/whitefridge-2.png" class="innovationImages" />
+            <h3>STORE IN FREEZER</h3>
+          </div>
+          <div>
+            <img src="./images/whitefrozed.png" class="innovationImages" />
+            <h3>COOK FROZEN</h3>
+          </div>
+          <div>
+            <img src="./images/whiteban.png" class="innovationImages" />
+            <h3>NO ADDED PRESERVATIVES</h3>
+          </div>
+          <div>
+            <img src="./images/whitePan-02.png" class="innovationImages" />
+            <h3>FRY, BAKE OR AIRFRY</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //// -->
+
+    <!-- //// -->
+
+    <div class="section" onclick="toggleSection('ingredientsContent')">
+      <h3>INGREDIENTS</h3>
+
+      <span class="symbol">+</span>
+    </div>
+    <div class="section-content" id="ingredientsContent">
+      <p class="ingredients-Content"></p>
+    </div>
+    <div class="section" onclick="toggleSection('nutritionalFactsContent')">
+      <h3>NUTRITIONAL FACTS</h3>
+      <span class="symbol">+</span>
+    </div>
+    <div class="section-content" id="nutritionalFactsContent">
+      <img class="nutritional-fact-content" />
+    </div>
+
+    <!-- /// -->
+    <div class="other-flavours-section">
+      <h1>Other Flavours</h1>
+      <div class="other-flavours-grid-section">
+        <a id="otherflavourcard1">
+          <div class="flavour-card" >
+            <div class="firstImage" id="otherflavourcard1bg">
+              <img src="./images/productImage-3.png" id="otherflavourcard1img"/>
+            </div>
+            <h1 id="otherflavourcard1h1">Spicy Paneer Pockets</h1>
+            <button>Know more</button>
+          </div>
+        </a>
+        <a id="otherflavourcard2">
+          <div class="flavour-card">
+            <div class="secondImage" id="otherflavourcard2bg">
+              <img src="./images/productImage-3.png"  id="otherflavourcard2img"/>
+            </div>
+            <h1 id="otherflavourcard2h1">Spicy Cheese Poppers</h1>
+            <button>Know more</button>
+          </div>
+        </a>
+        <a id="otherflavourcard3">
+          <div class="flavour-card">
+            <div class="thirdImage" id="otherflavourcard3bg">
+              <img src="./images/productImage-4.png" id="otherflavourcard3img" />
+            </div>
+            <h1 id="otherflavourcard3h1">Potato Roasties</h1>
+            <button>Know more</button>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="parent-recipies-section">
+      <div class="recipies-section">
+        <h1>Drool worthy recipes</h1>
+        <div class="recipies-grid-section">
+          <a href="/recipes2.html?recipe=recipe1" >
+            <div>
+              <img src="./images/secondpotato-(2).png" />
+              <h3>Paneer Tikka Masala</h3>
+            </div>
+          </a>
+          <a href="/recipes2.html?recipe=recipe2">
+            <div>
+              <img src="./images/firstpotato-(1).png" />
+              <h3>Spicy Chicken Nugget Wrap</h3>
+            </div>
+          </a>
+          <div>
+            <img src="./images/thirdpoatoto-(3).png" />
+            <h3>Amritsari Tikka masala</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-container">
+        <div class="footer-get-in-touch-section">
+          <input placeholder="GET 10% OFF ON YOUR FIRST ORDER" />
+          <button>GET IN TOUCH</button>
+        </div>
+        <div class="footer-links-section">
+          <a href="/">HOME</a>
+          <!-- <a href="/">PRODUCT</a> -->
+          <a href="https://cfpl.net.in/ourstory.php">ABOUT US</a>
+          <!-- <a href="/">OUR BLOG</a> -->
+          <a href="https://cfpl.net.in/contact.php">CONTACT US</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let urlParams = new URLSearchParams(window.location.search);
+      let productName = urlParams.get("product");
+      let shapeFill = document.querySelector(".shape-fill");
+      let productImage = document.querySelector(".product-image");
+      let productTitle = document.querySelector(".product-title");
+      let productDescription = document.querySelector(".product-description");
+      let featuresSection = document.querySelector(".features-section");
+      let ingredientsContent = document.querySelector(".ingredients-Content");
+      let nutritionalfactcontent = document.querySelector(
+        ".nutritional-fact-content"
+      );
+      let featuressectionparent = document.querySelector(
+        ".features-section-parent"
+      );
+
+     let otherflavourcard1= document.getElementById("otherflavourcard1");
+     let otherflavourcard1bg = document.getElementById("otherflavourcard1bg");
+     let otherflavourcard1img = document.getElementById("otherflavourcard1img");
+     let otherflavourcard1h1 = document.getElementById("otherflavourcard1h1");
+
+     let otherflavourcard2= document.getElementById("otherflavourcard2");
+     let otherflavourcard2bg = document.getElementById("otherflavourcard2bg");
+     let otherflavourcard2img = document.getElementById("otherflavourcard2img");
+     let otherflavourcard2h1 = document.getElementById("otherflavourcard2h1");
+
+     let otherflavourcard3= document.getElementById("otherflavourcard3");
+     let otherflavourcard3bg = document.getElementById("otherflavourcard3bg");
+     let otherflavourcard3img = document.getElementById("otherflavourcard3img");
+     let otherflavourcard3h1 = document.getElementById("otherflavourcard3h1");
+     //
+      if (productName == "corn-cheese-and-pepper-nuggets") {
+
+        otherflavourcard1bg.style.background=" linear-gradient(180deg, #EBC28E 0%, #DD9943 100%)";
+        otherflavourcard1h1.textContent="Spicy Paneer Pockets";
+        otherflavourcard1img.src="./images/nax png 1.png";
+        otherflavourcard1.href ="/product.html?product=spicy-paneer-pockets";
+
+        otherflavourcard2bg.style.background="linear-gradient(180deg, #BFCAEB 0%, #95A7DE 100%)";
+        otherflavourcard2h1.textContent="Spicy Cheese Poppers";
+        otherflavourcard2img.src="./images/nax png 5.png";
+        otherflavourcard2.href ="/product.html?product=spicy-cheese-poppers";
+
+        otherflavourcard3bg.style.background=" linear-gradient(180deg, #E4D7B0 0%, #DCB751 100%)";
+        otherflavourcard3h1.textContent="Potato Roasties";
+        otherflavourcard3img.src="./images/nax png 3.png";
+        otherflavourcard3.href ="/product.html?product=potato-rosties";
+
+
+
+        productTitle.style.color = "#429d7c";
+        featuresSection.style.backgroundColor = "#429d7c";
+        featuressectionparent.style.backgroundColor = "#429d7c";
+        shapeFill.style.fill = "#429d7c";
+        productImage.src = "./images/nax png 7.png";
+        nutritionalfactcontent.src = "./images/nutritionFacts.png";
+        productTitle.textContent = "Corn cheese & pepper nuggets";
+        ingredientsContent.textContent =
+          "Crazy Fries: Potato (92%), Palmolein Oil,  May Contain Wheat, Milk, Soy, Barley. Herb “N” Garlic Masala Mix : Iodized Salt, Sugar, Dehydrated Garlic (15%), Milk Solids, Onion Powder (8%), Mixed Spices (Chilli (3%), Black Pepper (1.5%) Bell Pepper), Cheese Powder, Mixed Herbs (3%) (Oregano, Thyme, Parsley, Basil), Acidity Regulator (INS330), Flavouring Substances (Natural & Nature Identical), Anticaking Agent (INS 551).  Contains Milk.  May Contain Soy, Barley, Wheat.";
+        productDescription.textContent =
+          "Savor the irresistible fusion of sweet corn and gooey cheese in our Corn Cheese Nuggets. A crispy golden exterior gives way to a burst of delightful flavors, making every bite a perfect blend of indulgence.";
+
+      } else if (productName == "potato-rosties") {
+
+        otherflavourcard1bg.style.background=" linear-gradient(180deg, #83BFA9 0%, #30946F 100%)";
+        otherflavourcard1h1.textContent="Corn Cheese & Pepper Nuggets";
+        otherflavourcard1img.src="./images/nax png 7.png";
+        otherflavourcard1.href ="/product.html?product=corn-cheese-and-pepper-nuggets";
+
+        otherflavourcard2bg.style.background="linear-gradient(180deg, #bbd182 0%, #90a35c 100%)";
+        otherflavourcard2h1.textContent="Chilli Potato Tikki";
+        otherflavourcard2img.src="./images/nax png 4.png";
+        otherflavourcard2.href ="/product.html?product=chilli-potato-tikki";
+
+        otherflavourcard3bg.style.background=" linear-gradient(180deg, #bc6c55 0%, #c75637 100%) ";
+        otherflavourcard3h1.textContent="Spinach Corn and Cheese Pockets";
+        otherflavourcard3img.src="./images/nax png 6.png";
+        otherflavourcard3.href ="/product.html?product=spinach-corn-and-cheese-pockets";
+
+
+
+        productTitle.style.color = "#eac152";
+        featuresSection.style.backgroundColor = "#eac152";
+        featuressectionparent.style.backgroundColor = "#eac152";
+        shapeFill.style.fill = "#eac152";
+        productImage.src = "./images/nax png 3.png";
+        ingredientsContent.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora ";
+        productTitle.textContent = "Potato Rosties";
+        productDescription.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora eaque quasi laboriosam minus veniam dignissimos veritatis sit dolore earum?";
+      }
+     else if (productName == "mixed-bean-nuggets") {
+
+      otherflavourcard1bg.style.background=" linear-gradient(180deg, #EFD17D 0%, #E5B226 100%)";
+        otherflavourcard1h1.textContent="Potato Roasties";
+        otherflavourcard1img.src="./images/nax png 3.png";
+        otherflavourcard1.href ="/product.html?product=potato-rosties";
+
+        otherflavourcard2bg.style.background="linear-gradient(180deg, #D5D77A 0%, #B9BD22 100%)";
+        otherflavourcard2h1.textContent="Mixed Bean Nuggets";
+        otherflavourcard2img.src="./images/nax png 2.png";
+        otherflavourcard2.href ="/product.html?product=mixed-bean-nuggets";
+
+        otherflavourcard3bg.style.background=" linear-gradient(180deg, #BFCAEB 0%, #95A7DE 100%)";
+        otherflavourcard3h1.textContent="Spicy Cheese Poppers";
+        otherflavourcard3img.src="./images/nax png 5.png";
+        otherflavourcard3.href ="/product.html?product=spicy-cheese-poppers";
+
+
+
+
+        productTitle.style.color = "#bfc337";
+        featuresSection.style.backgroundColor = "#bfc337";
+        featuressectionparent.style.backgroundColor = "#bfc337";
+        shapeFill.style.fill = "#bfc337";
+        productImage.src = "./images/nax png 2.png";
+        ingredientsContent.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora ";
+        productTitle.textContent = "Mixed Bean Nuggets";
+        productDescription.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora eaque quasi laboriosam minus veniam dignissimos veritatis sit dolore earum?";
+      }
+
+
+        else if (productName == "chilli-potato-tikki") {
+        otherflavourcard1bg.style.background="linear-gradient(180deg, #D5D77A 0%, #B9BD22 100%)";
+        otherflavourcard1h1.textContent="Mixed Bean Nuggets";
+        otherflavourcard1img.src="./images/nax png 2.png";
+        otherflavourcard1.href ="/product.html?product=mixed-bean-nuggets";
+
+        otherflavourcard2bg.style.background="linear-gradient(180deg, #83BFA9 0%, #30946F 100%)";
+        otherflavourcard2h1.textContent="Cheese & Pepper Nuggets";
+        otherflavourcard2img.src="./images/nax png 7.png";
+        otherflavourcard2.href ="/product.html?product=corn-cheese-and-pepper-nuggets";
+
+        otherflavourcard3bg.style.background=" linear-gradient(180deg, #E4D7B0 0%, #DCB751 100%)";
+        otherflavourcard3h1.textContent="Potato Roasties";
+        otherflavourcard3img.src="./images/nax png 3.png";
+        otherflavourcard3.href ="/product.html?product=potato-rosties";
+
+
+
+
+        productTitle.style.color = "#60781f";
+        featuresSection.style.backgroundColor = "#60781f";
+        featuressectionparent.style.backgroundColor = "#60781f";
+        shapeFill.style.fill = "#60781f";
+        productImage.src = "./images/nax png 4.png";
+        ingredientsContent.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora ";
+        productTitle.textContent = "chilli potato tikki";
+        productDescription.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora eaque quasi laboriosam minus veniam dignissimos veritatis sit dolore earum?";
+      }
+      else if (productName == "spinach-corn-and-cheese-pockets") {
+        otherflavourcard1bg.style.background="linear-gradient(180deg, #bbd182 0%, #90a35c 100%)";
+        otherflavourcard1h1.textContent="Chilli Potato Tikki";
+        otherflavourcard1img.src="./images/nax png 4.png";
+        otherflavourcard1.href ="/product.html?product=chilli-potato-tikki";
+
+        otherflavourcard2bg.style.background="linear-gradient(180deg, #D5D77A 0%, #B9BD22 100%)";
+        otherflavourcard2h1.textContent="Mixed Bean Nuggets";
+        otherflavourcard2img.src="./images/nax png 2.png";
+        otherflavourcard2.href ="/product.html?product=mixed-bean-nuggets";
+
+        otherflavourcard3bg.style.background=" linear-gradient(180deg, #BFCAEB 0%, #95A7DE 100%)";
+        otherflavourcard3h1.textContent="Potato Roasties";
+        otherflavourcard3img.src="./images/nax png 5.png";
+        otherflavourcard3.href ="/product.html?product=spicy-cheese-poppers";
+
+
+
+
+        productTitle.style.color = "#ce674b";
+        featuresSection.style.backgroundColor = "#ce674b";
+        featuressectionparent.style.backgroundColor = "#ce674b";
+        shapeFill.style.fill = "#ce674b";
+        productImage.src = "./images/nax png 6.png";
+        ingredientsContent.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora ";
+        productTitle.textContent = "Spinach Corn & Cheese Pockets";
+        productDescription.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora eaque quasi laboriosam minus veniam dignissimos veritatis sit dolore earum?";
+      }
+
+      else if (productName == "spicy-cheese-poppers") {
+        otherflavourcard1bg.style.background=" linear-gradient(180deg, #bc6c55 0%, #c75637 100%)";
+        otherflavourcard1h1.textContent="Spinach Corn & Cheese Pockets";
+        otherflavourcard1img.src="./images/nax png 6.png";
+        otherflavourcard1.href ="/product.html?product=spinach-corn-and-cheese-pockets";
+
+        otherflavourcard2bg.style.background=" linear-gradient(180deg, #E4D7B0 0%, #DCB751 100%)";
+        otherflavourcard2h1.textContent="Mixed Bean Nuggets";
+        otherflavourcard2img.src="./images/nax png 3.png";
+        otherflavourcard2.href ="/product.html?product=potato-rosties";
+
+        otherflavourcard3bg.style.background=" linear-gradient(180deg, #83BFA9 0%, #30946F 100%)";
+        otherflavourcard3h1.textContent="Corn Cheeze & Pepper Nuggets";
+        otherflavourcard3img.src="./images/nax png 7.png";
+        otherflavourcard3.href ="/product.html?product=corn-cheese-and-pepper-nuggets";
+
+
+
+        productTitle.style.color = "#405a97";
+        featuresSection.style.backgroundColor = "#405a97";
+        featuressectionparent.style.backgroundColor = "#405a97";
+        shapeFill.style.fill = "#405a97";
+        productImage.src = "./images/nax png 5.png";
+        ingredientsContent.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora ";
+        productTitle.textContent = "spicy cheese poppers";
+        productDescription.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora eaque quasi laboriosam minus veniam dignissimos veritatis sit dolore earum?";
+      }
+
+      else if (productName == "spicy-paneer-pockets") {
+
+        otherflavourcard1bg.style.background=" linear-gradient(180deg, #BFCAEB 0%, #95A7DE 100%)";
+        otherflavourcard1h1.textContent="Spicy Cheese Poppers";
+        otherflavourcard1img.src="./images/nax png 5.png";
+        otherflavourcard1.href ="/product.html?product=spicy-cheese-poppers";
+
+        otherflavourcard2bg.style.background=" linear-gradient(180deg, #bbd182 0%, #90a35c 100%)";
+        otherflavourcard2h1.textContent="Chilli Potato Tikki";
+        otherflavourcard2img.src="./images/nax png 4.png";
+        otherflavourcard2.href ="/product.html?product=chilli-potato-tikki";
+
+        otherflavourcard3bg.style.background="linear-gradient(180deg, #bc6c55 0%, #c75637 100%) ";
+        otherflavourcard3h1.textContent="Spinach Corn & Cheese Pockets";
+        otherflavourcard3img.src="./images/nax png 6.png";
+        otherflavourcard3.href ="/product.html?product=spinach-corn-and-cheese-pockets";
+
+
+
+        productTitle.style.color = "#e0a356";
+        featuresSection.style.backgroundColor = "#e0a356";
+        featuressectionparent.style.backgroundColor = "#e0a356";
+        shapeFill.style.fill = "#e0a356";
+        productImage.src = "./images/nax png 1.png";
+        ingredientsContent.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora ";
+        productTitle.textContent = "SPICY PANEER POCKETS";
+        productDescription.textContent =
+          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora eaque quasi laboriosam minus veniam dignissimos veritatis sit dolore earum?";
+      }
+
+
+      function toggleSection(sectionId) {
+        var content = document.getElementById(sectionId);
+        content.classList.toggle("open");
+        if (content.classList.contains("open")) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = "0";
+        }
+      }
+    </script>
+     <script>
+      let headerLinksSection = document.querySelector(".header-links-section");
+  let headerLinks = headerLinksSection.querySelectorAll("a");
+  let pageHeader = document.querySelector(".page-header");
+  document.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      pageHeader.style.backgroundColor = "#E8C055";
+      pageHeader.style.position = "fixed";
+      pageHeader.style.top = "0";
+      pageHeader.style.left = "0";
+      pageHeader.style.zIndex = "20";
+      headerLinks.forEach(function (link) {
+        link.style.fontSize = "20px";
+      });
+    } else {
+      pageHeader.style.backgroundColor = "white";
+      pageHeader.style.position = "relative";
+      headerLinks.forEach(function (link) {
+        link.style.fontSize = "20px";
+        link.style.color = "#26386E";
+      });
+    }
+  });
+
+  function toggleMenu() {
+    document.querySelector(".menu-icon").classList.toggle("active");
+    document.querySelector(".nav-links").classList.toggle("active");
+  }
+
+  let hamburgerMenuSection = document.querySelector(".hamburger-menu");
+  let cross = document.querySelector(".cross");
+  let body = document.querySelector("body");
+  let hamburgerSymbol = document.querySelector(".hamburger-section");
+  let hamburgerOverlay = document.querySelector(".hamburger-overlay");
+  let hamburgerSlider = document.querySelector(".hamburger-slider");
+
+  hamburgerSymbol.addEventListener("click", function () {
+    hamburgerMenuSection.style.opacity = "1";
+    hamburgerMenuSection.style.visibility = "visible";
+    hamburgerSlider.style.right = "0px";
+    body.style.position = "fixed"; // Fix body position to disable scrolling
+    body.style.width = "100%"; // Maintain full width
+  });
+
+  hamburgerOverlay.addEventListener("click", function () {
+    hamburgerSlider.style.right = "-330px";
+    hamburgerMenuSection.style.opacity = "0";
+    hamburgerMenuSection.style.visibility = "hidden";
+    body.style.position = "static"; // Reset body position to enable scrolling
+    body.style.width = "auto"; // Reset width
+  });
+
+  cross.addEventListener("click", function () {
+    hamburgerSlider.style.right = "-330px";
+    hamburgerMenuSection.style.opacity = "0";
+    hamburgerMenuSection.style.visibility = "hidden";
+    body.style.position = "static"; // Reset body position to enable scrolling
+    body.style.width = "auto"; // Reset width
+  });
+
+</script>
+  </body>
+</html>

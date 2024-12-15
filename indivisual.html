@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indivisual</title>
+    <link rel="stylesheet" href="./css/indivisual.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="section" onclick="toggleSection('ingredientsContent')">INGREDIENTS <span class="symbol">+</span></div>
+    <div class="section-content" id="ingredientsContent">
+      <p>Ingredient 1</p>
+      <p>Ingredient 2</p>
+      <p>Ingredient 3</p>
+    </div>
+    <div class="section" onclick="toggleSection('nutritionalFactsContent')">NUTRITIONAL FACTS <span class="symbol">+</span></div>
+    <div class="section-content" id="nutritionalFactsContent">
+      <p>Calories: 100</p>
+      <p>Fat: 5g</p>
+      <p>Protein: 10g</p>
+    </div>
+
+<script>
+function toggleSection(sectionId) {
+  var content = document.getElementById(sectionId);
+  content.classList.toggle('open');
+  if (content.classList.contains('open')) {
+    content.style.maxHeight = content.scrollHeight + "px";
+  } else {
+    content.style.maxHeight = "0";
+  }
+}
+</script>
+</body>
+</html>
